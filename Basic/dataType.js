@@ -18,8 +18,8 @@
  **/
 
     /*
-        The null type.
-        The type of obj returns object is a known bug in js.
+    * The null type.
+    * The type of obj returns object is a known bug in js.
     **/
     let obj = null;
     console.log('null type: ', obj, typeof obj); // null object
