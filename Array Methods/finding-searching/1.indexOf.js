@@ -35,7 +35,7 @@
 
     /**
      * 1.Using indexOf() to search for NaN.
-     * 2.Using indexOf() on sparse arrays.
+     * 2.Using indexOf() on sparse array.
      */
     const weekDay = ['Sun', 'Mon', ,'Tue', ,'sat', NaN];
 
