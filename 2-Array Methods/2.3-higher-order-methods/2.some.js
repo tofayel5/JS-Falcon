@@ -1,13 +1,15 @@
 /**
  * Array.prototype.some() method.
  * To check if an array has at least one element that meets a specified condition.if exists return true, otherwise false.
- * The some() method is an iterative method. 
+ * The some() method is an iterative method. It calls a provided callbackFn function once for each element in an array,
+   until the callbackFn returns a truthy value. If such an element is found, some() immediately returns true and stops iterating through the array.
+   Otherwise, if callbackFn returns a falsy value for all elements, some() returns false.
  * 
  * some(callbackFn)
  * some(callbackFn, thisArg)
  * 
  * Parameters: callbackFn(element , index, array), thisArg(optional).
- * Return: false, unless callbackFn returns true.
+ * Return: false unless callbackFn returns a truthy value for an array element, in which case true is immediately returned.
  */
 
      // Check if an element exists in the array.
@@ -27,7 +29,7 @@
         return (el >= this.min && el <= this.max);
      }, range)
      console.log('result: ', result3); // true
-     
+
     // In array of object.
      const students = [
         {id: 1, name: 'Jasim', age: 15},
@@ -38,3 +40,9 @@
       ];
       let student = students.some(element => element.age > 18);
       console.log('student: ', student); // true
+
+    // empty array
+     let gtZero = [].some(element => element > 0); // any condition
+     let ltZero = [].some(element => element < 0); // any condition
+     console.log('gtZero:', gtZero); // false
+     console.log('ltZero:', ltZero); // false
