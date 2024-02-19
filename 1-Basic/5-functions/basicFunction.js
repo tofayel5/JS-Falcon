@@ -31,3 +31,18 @@ function total() {
     return sum;
 }
 console.log(total(1, 2, 3, 4, 5)); // 15
+
+/**
+ *   ---- Passing a function to another function ----
+ * Because functions are values, you can pass a function as an argument into another function.
+ */
+
+function adds(a, b) {
+    return a + b;
+}
+let sum1 = adds;
+function average(a, b, fn) {
+    return fn(a, b) / 2;
+}
+let results = average(10, 20, sum1);
+console.log('results: ', results);
